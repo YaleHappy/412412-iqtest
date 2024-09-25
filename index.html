@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記憶力大考驗0925</title>
+    <link rel="stylesheet" href="styles.css">
+
+      <!-- 引入 SweetAlert2 CSS 和 JS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+<body>
+    <!-- 選擇主題的下拉選單 -->
+    <div class="selector-container">
+        <label for="theme-selector">選擇卡片主題：</label>
+        <select id="theme-selector">
+            <option value="anime">動漫主題</option>
+            <option value="tools">工具主題</option>
+        </select>
+    </div>
+
+    <!-- 按鈕 -->
+    <div class="button-container">
+        <button id="start-game">開始遊戲</button>
+        <button id="show-front">顯示正面</button>
+        <button id="show-back">顯示背面</button>
+        <button id="pause-game">暫停</button> <!-- 新增暫停按鈕 -->
+        <button id="restart-game">重新開始</button> <!-- 新增重新開始按鈕 -->
+
+
+    </div>
+
+    <!-- 卡片容器 -->
+    <div class="card-container" id="card-container">
+        <!-- 卡牌將由 JS 動態插入 -->
+    </div>
+
+    <div class="game-info">
+        <div id="timer">時間:0秒</div>
+        <div id="score">分數:0</div>
+    </div>
+    
+
+    <!-- 聲音檔案 -->
+    <audio id="match-sound" src="sounds/match-sound.mp3"></audio>
+    <audio id="fail-sound" src="sounds/fail.mp3"></audio>
+
+    <!-- 社群媒體分享 -->
+    <a id="twitter-share" href="#" target="_blank">分享到 Twitter</a>
+    <a id="facebook-share" href="#" target="_blank">分享到 Facebook</a>
+
+
+    <!--文字敘述-->
+    <div id="best-record">最佳紀錄: -- 秒</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
